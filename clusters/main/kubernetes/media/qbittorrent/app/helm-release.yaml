@@ -96,17 +96,18 @@ spec:
         env:
           VPN_TYPE: "wireguard"
           VPN_SERVICE_PROVIDER: "custom"
-          WIREGUARD_ENDPOINT_IP: "${VPN_ENDPOINT_IP}"
-          WIREGUARD_ENDPOINT_PORT: "${VPN_ENDPOINT_PORT}"
+          WIREGUARD_ENDPOINT_IP: "${WIREGUARD_ENDPOINT_IP}"
+          WIREGUARD_ENDPOINT_PORT: "${WIREGUARD_ENDPOINT_PORT}"
           WIREGUARD_PUBLIC_KEY: "${WIREGUARD_PUBLIC_KEY}"
           WIREGUARD_PRIVATE_KEY: "${WIREGUARD_PRIVATE_KEY}"
           WIREGUARD_ADDRESSES: "${WIREGUARD_ADDRESSES}"
-          FIREWALL_VPN_INPUT_PORTS: "{{ .Values.service.torrent.ports.torrent.port }}"
-          VPN_PORT_FORWARDING_LISTENING_PORT: "{{ .Values.service.torrent.ports.torrent.port }}"
+          # FIREWALL_VPN_INPUT_PORTS: "{{ .Values.service.torrent.ports.torrent.port }}"
+          # VPN_PORT_FORWARDING_LISTENING_PORT: "{{ .Values.service.torrent.ports.torrent.port }}"
           VPN_PORT_FORWARDING: on
           VPN_PORT_FORWARDING_PROVIDER: private internet access
           VPN_PORT_FORWARDING_USERNAME: "${VPN_USER}"
           VPN_PORT_FORWARDING_PASSWORD: "${VPN_PASS}"
+          SERVER_NAMES: "${VPN_SERVER_NAME}"
     persistence:
       config:
         volsync:
