@@ -66,6 +66,11 @@ spec:
             enabled: true
             port: "{{ .Values.service.torrent.ports.torrent.port }}"
             protocol: udp
+    workload:
+      qbitportforward:
+        enabled: true
+        QBT_USERNAME: "admin"
+        QBT_PASSWORD: "password"
     ingress:
       main:
         enabled: true
