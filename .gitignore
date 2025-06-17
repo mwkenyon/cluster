@@ -12,3 +12,4 @@ mounts/
 scripts/*
 kubeconfig
 configs/charts/*
+**/.decrypted~*
