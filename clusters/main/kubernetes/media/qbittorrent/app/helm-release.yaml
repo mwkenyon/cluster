@@ -82,23 +82,6 @@ spec:
             paths:
               - path: /
                 pathType: Prefix
-    addons:
-      vpn:
-        type: gluetun
-        killSwitch: false
-        excludedNetworks_IPv4:
-          - "192.0.0.0/8"
-        excludedNetworks_IPv6: []
-        env:
-          VPN_TYPE: "wireguard"
-          VPN_SERVICE_PROVIDER: "custom"
-          VPN_ENDPOINT_IP: "${VPN_ENDPOINT_IP}"
-          VPN_ENDPOINT_PORT: "${VPN_ENDPOINT_PORT}"
-          WIREGUARD_PUBLIC_KEY: "${WIREGUARD_PUBLIC_KEY}"
-          WIREGUARD_PRIVATE_KEY: "${WIREGUARD_PRIVATE_KEY}"
-          WIREGUARD_ADDRESSES: "${WIREGUARD_ADDRESSES}"
-          FIREWALL_VPN_INPUT_PORTS: "{{ .Values.service.torrent.ports.torrent.port }}"
-          VPN_PORT_FORWARDING_LISTENING_PORT: "{{ .Values.service.torrent.ports.torrent.port }}"
     persistence:
       config:
         volsync:
