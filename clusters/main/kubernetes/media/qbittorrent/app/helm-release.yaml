@@ -85,7 +85,7 @@ spec:
     addons:
       vpn:
         type: gluetun
-        killSwitch: true
+        killSwitch: false
         excludedNetworks_IPv4:
           - "192.0.0.0/8"
         excludedNetworks_IPv6: []
