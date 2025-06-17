@@ -1,3 +1,1 @@
-# cluster-template
-
-TODO add docs.
+This is a kubernetes cluster Powered by TrueCharts ClusterTool
